@@ -21,7 +21,7 @@ export const crawl = async()=> {
 
         console.log('Opening the page...')
         const page = await browser.newPage()
-        await page.goto(process.env.SCRAPED_URL ?? '')
+        await page.goto('https://www.icarros.com.br/tabela-fipe/volkswagen/fox/2022/fox-1.6-connect#:~:text=Pre%C3%A7o%20FIPE%20R%24%2066.369')
         console.log('Page loaded.')
 
         console.log('Selecting the text element.')
