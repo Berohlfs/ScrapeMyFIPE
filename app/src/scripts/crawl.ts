@@ -17,9 +17,7 @@ export const crawl = async()=> {
     try{
         console.log('\n\n================================ STEP 01: Crawling.')
         console.log('Opening Browser...')
-        const browser = await puppeteer.launch({
-            headless: false
-        })
+        const browser = await puppeteer.launch()
 
         console.log('Opening the page...')
         const page = await browser.newPage()

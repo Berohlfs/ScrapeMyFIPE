@@ -22,7 +22,7 @@ const main = async()=> {
 }
 
 new CronJob(
-	'*/10 * * * * *', 
+	'* * 0 15 * *', 
 	main, 
 	null,
 	true,
