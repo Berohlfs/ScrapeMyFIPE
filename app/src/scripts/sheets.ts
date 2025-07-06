@@ -12,7 +12,7 @@ export const postFIPE = async(fipe: string)=> {
                 'Authorization': `Bearer ${process.env.SHEETS_DB_BEARER_TOKEN}`
             }
         })
-        console.log('Data send successfully.')
+        console.log('Data sent successfully.')
     }catch(error){
         console.error(error)
         throw Error('Failed to post FIPE into sheets.')
