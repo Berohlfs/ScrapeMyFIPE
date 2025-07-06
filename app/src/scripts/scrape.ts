@@ -13,9 +13,9 @@ const extractNumber = (data: string)=> {
     return extracted
 }
 
-export const crawl = async()=> {
+export const scrape = async()=> {
     try{
-        console.log('\n\n================================ STEP 01: Crawling.')
+        console.log('\n\n================================ STEP 01: Scrapping.')
         console.log('Opening Browser...')
         const browser = await puppeteer.launch()
 
@@ -36,7 +36,7 @@ export const crawl = async()=> {
             return text_element.textContent
         })
         if(!fipe){
-            throw 'Price value not found.'
+            throw 'Price not found.'
         }
         fipe = extractNumber(fipe)
         console.log('Element selected.')
@@ -48,6 +48,6 @@ export const crawl = async()=> {
         return fipe
     }catch(error){
         console.error(error)
-        throw Error('Failed to crawl.')
+        throw Error('Failed to scrape FIPE.')
     }
 }

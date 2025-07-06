@@ -3,13 +3,13 @@ import { CronJob } from "cron"
 import dotenv from 'dotenv'
 dotenv.config()
 // Scripts
-import { crawl } from './scripts/crawl'
+import { scrape } from './scripts/scrape'
 import { sendEmail } from "./scripts/sendEmail"
 import { postFIPE } from "./scripts/sheets"
 
 const main = async()=> {
     try{
-        const fipe = await crawl()
+        const fipe = await scrape()
         await sendEmail(fipe)
         await postFIPE(fipe)
     }catch(error){
