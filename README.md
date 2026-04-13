@@ -1,4 +1,4 @@
-# ScrapeMyFIPE 🚗📊
+# FIPE Scraper 🚗📊
 
 An automated web scraper that retrieves the **monthly FIPE price** of a specific car (Volkswagen Gol 2010), sends the updated value via **email**, and logs the data into a **Google Spreadsheet** using the [SheetsDB](https://sheetsdb.io/) API — all triggered via a scheduled **cron job**.
 
